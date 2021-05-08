@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.EnterPersonalInfoActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_enter_personal_info"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="0dp"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageButton
+            android:id="@+id/ibtn_toolbar_enter_personal_info"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/exit_page" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tv_title_enter_personal_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1d1d1d"
+        android:textSize="24sp"
+        android:text="@string/title_enter_personal_info"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_enter_personal_info" />
+
+    <TextView
+        android:id="@+id/tv_section1_enter_personal_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/section1_enter_personal_info"
+        android:textColor="#aeaeae"
+        android:textSize="13sp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_enter_personal_info" />
+
+    <View
+        android:id="@+id/v_divider1_enter_personal_info"
+        android:layout_width="32dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_section1_enter_personal_info" />
+
+    <LinearLayout
+        android:id="@+id/ll_gender_man"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/v_divider1_enter_personal_info"
+        app:layout_constraintTop_toBottomOf="@+id/tv_section1_enter_personal_info">
+
+        <FrameLayout
+            android:id="@+id/fl_gender_man"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/ibtn_gender_man_default"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:scaleType="fitEnd"
+                android:background="@drawable/gender_button_default_radius18"
+                android:src="@drawable/ic_gender_man_default"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+                android:id="@+id/ibtn_gender_man_selected"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:scaleType="fitEnd"
+                android:background="@drawable/gender_button_selected_radius18"
+                android:src="@drawable/ic_gender_man_selected"
+                tools:ignore="ContentDescription" />
+        </FrameLayout>
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="남자"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_gender_woman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/v_divider1_enter_personal_info"
+        app:layout_constraintTop_toBottomOf="@+id/tv_section1_enter_personal_info">
+
+        <FrameLayout
+            android:id="@+id/fl_gender_woman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/ibtn_gender_woman_default"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:background="@drawable/gender_button_default_radius18"
+                android:scaleType="fitEnd"
+                android:src="@drawable/ic_gender_woman_default"
+                tools:ignore="ContentDescription" />
+
+            <ImageButton
+                android:id="@+id/ibtn_gender_woman_selected"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:background="@drawable/gender_button_selected_radius18"
+                android:scaleType="fitEnd"
+                android:src="@drawable/ic_gender_woman_selected"
+                tools:ignore="ContentDescription" />
+        </FrameLayout>
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="여자"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_section2_enter_personal_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/section2_enter_personal_info"
+        android:paddingBottom="20dp"
+        android:textColor="#aeaeae"
+        android:textSize="13sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_gender_man" />
+
+
+    <View
+        android:id="@+id/v_divider2_enter_personal_info"
+        android:layout_width="8dp"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_section2_enter_personal_info" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/v_divider2_enter_personal_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_section2_enter_personal_info">
+
+        <Button
+            android:id="@+id/btn_age_range_20_default"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@drawable/button_color_border_radius10"
+            android:text="20대"
+            android:textColor="#656565"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btn_age_range_20_selected"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@drawable/button_purple_radius10"
+            android:text="20대"
+            android:textColor="@android:color/white"
+            tools:ignore="HardcodedText" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/v_divider2_enter_personal_info"
+        app:layout_constraintTop_toBottomOf="@+id/tv_section2_enter_personal_info">
+
+        <Button
+            android:id="@+id/btn_age_range_30_default"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@drawable/button_color_border_radius10"
+            android:text="30대"
+            android:textColor="#656565"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btn_age_range_30_selected"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@drawable/button_purple_radius10"
+            android:text="30대"
+            android:textColor="@android:color/white"
+            tools:ignore="HardcodedText" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/v_divider2_enter_personal_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2">
+
+        <Button
+            android:id="@+id/btn_age_range_40_default"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@drawable/button_color_border_radius10"
+            android:text="40대"
+            android:textColor="#656565"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btn_age_range_40_selected"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@drawable/button_purple_radius10"
+            android:text="40대"
+            android:textColor="@android:color/white"
+            tools:ignore="HardcodedText" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/v_divider2_enter_personal_info"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout3">
+
+        <Button
+            android:id="@+id/btn_age_range_more50_default"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@drawable/button_color_border_radius10"
+            android:text="50대 이상"
+            android:textColor="#656565"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btn_age_range_more50_selected"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@drawable/button_purple_radius10"
+            android:text="50대 이상"
+            android:textColor="@android:color/white"
+            tools:ignore="HardcodedText" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_ok_enter_personal_info"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/button_purple_radius10"
+        android:text="다음"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

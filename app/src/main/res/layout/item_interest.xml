@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="18dp"
+        android:elevation="0dp"
+        android:layout_gravity="center"
+        tools:ignore="UnusedAttribute">
+        <FrameLayout
+            android:id="@+id/iv_item_interest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_image_item_interest"
+                android:scaleType="centerCrop"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                tools:ignore="ContentDescription" />
+
+            <View
+                android:id="@+id/v_cover_item_interest"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/cover_radius18" />
+
+            <ImageView
+                android:id="@+id/iv_cover_item_interest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:tint="@color/white"
+                android:src="@drawable/ic_check"
+                tools:ignore="ContentDescription" />
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_name_item_interest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="먹거리"
+        android:textColor="#515151"
+        android:textSize="12sp"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

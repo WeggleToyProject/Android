@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.LoginActivity">
+
+    <ImageView
+        android:layout_marginTop="220dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_anyconv_com__66050044"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/kakao_auth_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_kakao_auth"
+        app:layout_constraintBottom_toTopOf="@+id/tv_agree_if_login"
+        app:layout_constraintEnd_toStartOf="@+id/auth_button_divider"
+        android:layout_marginBottom="38dp" />
+
+    <View
+        android:id="@+id/auth_button_divider"
+        android:layout_width="18dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_agree_if_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/naver_auth_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_naver_auth"
+        app:layout_constraintBottom_toTopOf="@+id/tv_agree_if_login"
+        app:layout_constraintStart_toEndOf="@+id/auth_button_divider"
+        android:layout_marginBottom="38dp" />
+
+    <TextView
+        android:id="@+id/tv_agree_if_login"
+        android:layout_width="218dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="@string/agree_if_login"
+        android:textSize="10sp"
+        android:textColor="#3b3b3b"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
